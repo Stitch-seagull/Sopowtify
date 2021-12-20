@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Sopowtify</title>
+    <link rel="stylesheet" href="./css/home.css">
+</head>
+
+<body>
+    <!-- Audio -->
+    <audio id="fixette" src="./audio/fixette.mp3"></audio>
+    <audio id="galerie" src="./audio/galerie.mp3"></audio>
+    <audio id="shonen" src="./audio/shonen.mp3"></audio>
+    <audio id="espace" src="./audio/espace.mp3"></audio>
+    <audio id="akimbo" src="./audio/akimbo.mp3"></audio>
+
+
+    <div class="content">
+
+        <div class="navbar-left">
+            <div class="big">
+                <div class="button-accueil space" id="flex">
+                    <img src="./icons/icon-accueil.png" class="icon">
+                    <p>Accueil</p>
+                </div>
+                <div class="button-rechercher space" id="flex">
+                    <img src="./icons/icon-loupe.png" class="icon">
+                    <p>Recherche</p>
+                </div>
+                <a href="pages/bibliothèque.html">
+                <div class="button-bibliothèque space" id="flex">
+                    <img src="./icons/icon-book.png" class="icon">
+                    <p class="bibliotheque">Bibliothèque</p>
+                </div>
+                </a>
+            </div>
+            <div class="big second">
+                <div class="button-create-playlist space" id="flex">
+                    <img src="./icons/icon-plus.png" class="icon">
+                    <p>Créer une playlist</p>
+                </div>
+                <div class="button-liked-title space" id="flex">
+                    <img src="./icons/icon-heart.png" class="icon">
+                    <p>Titres likés</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="home-right">
+            <div class="top">
+                <div id="flex">
+                    <div class="liked-title-img">
+                        <img src="./img/liked-title.png">
+                    </div>
+                    <div class="playlist-title">
+                        <p>PLAYLIST</p>
+                    </div>
+                    <div class="liked-title">
+                        <h1>Titres likés</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="music">
+                <div class="music-left">
+                    <div class="play">
+                        <div class="button-play-green center"><img src="./icons/icon-play.png"
+                                style="height: 30px; width: auto;">
+                        </div>
+                    </div>
+                    <div class="addsong">
+                        <div class="button-add-song"><img src="./icons/icon-addsong.png" class="img-addsong"></div>
+                    </div>
+                </div>
+                <div class="music-bottom">
+                    <div class="hashtag">#</div>
+                    <div class="title">Titre</div>
+                    <div class="album">Album</div>
+                    <div class="duration"><img src="./icons/icon-clock.png" style="height: 25px; width: 25px;"></div>
+                </div>
+                <div class="center">
+                    <hr class="line">
+                </div>
+            </div>
+        </div>
+
+        <!-- Songs -->
+        <div class="song">
+            <div class="uploaded-song change1" id="flex">
+                <div class="hashtag-song" id="hashtag1">1</div>
+                <div class="play-song" id="play1">
+                    <img src="./icons/icon-play.png" style="margin-left: -15px; height: 20px; width: 20px;"
+                        onclick="playfixette()">
+                </div>
+                <div class="cover-song" id="cover-song"><img src="./img/akimbo.png" style="height: 50px; width: 50px;">
+                </div>
+                <div class="title-song">
+                    <p id="song-name">Fixette</p>
+                </div>
+                <div class="album-song">
+                    <p id="song-album">Akimbo</p>
+                </div>
+                <div class="button-delete-song"><img src="./icons/icon-delete.png" class="icon" onclick="deletesong()">
+                </div>
+                <div class="duration-song">
+                    <p id="song-duration">3:33</p>
+                </div>
+            </div>
+
+            <div class="uploaded-song change2" id="flex">
+                <div class="hashtag-song" id="hashtag2">2</div>
+                <div class="play-song" id="play2">
+                    <img src="./icons/icon-play.png" style="margin-left: -15px; height: 20px; width: 20px;"
+                        onclick="playgalerie()">
+                </div>
+                <div class="cover-song" id="cover-song"><img src="./img/akimbo.png" style="height: 50px; width: 50px;">
+                </div>
+                <div class="title-song">
+                    <p id="song-name">Galerie</p>
+                </div>
+                <div class="album-song">
+                    <p id="song-album">Akimbo</p>
+                </div>
+                <div class="button-delete-song"><img src="./icons/icon-delete.png" class="icon" onclick="deletesong()">
+                </div>
+                <div class="duration-song">
+                    <p id="song-duration">2:45</p>
+                </div>
+            </div>
+
+            <div class="uploaded-song change3" id="flex">
+                <div class="hashtag-song" id="hashtag3">3</div>
+                <div class="play-song" id="play3">
+                    <img src="./icons/icon-play.png" style="margin-left: -15px; height: 20px; width: 20px;"
+                        onclick="playshonen()">
+                </div>
+                <div class="cover-song" id="cover-song"><img src="./img/akimbo.png" style="height: 50px; width: 50px;">
+                </div>
+                <div class="title-song">
+                    <p id="song-name">Shonen</p>
+                </div>
+                <div class="album-song">
+                    <p id="song-album">Akimbo</p>
+                </div>
+                <div class="button-delete-song"><img src="./icons/icon-delete.png" class="icon" onclick="deletesong()">
+                </div>
+                <div class="duration-song">
+                    <p id="song-duration">2:44</p>
+                </div>
+            </div>
+
+            <div class="uploaded-song change4" id="flex">
+                <div class="hashtag-song" id="hashtag4">4</div>
+                <div class="play-song" id="play4">
+                    <img src="./icons/icon-play.png" style="margin-left: -15px; height: 20px; width: 20px;"
+                        onclick="playespace()">
+                </div>
+                <div class="cover-song" id="cover-song"><img src="./img/akimbo.png" style="height: 50px; width: 50px;">
+                </div>
+                <div class="title-song">
+                    <p id="song-name">Espace</p>
+                </div>
+                <div class="album-song">
+                    <p id="song-album">Akimbo</p>
+                </div>
+                <div class="button-delete-song"><img src="./icons/icon-delete.png" class="icon" onclick="deletesong()">
+                </div>
+                <div class="duration-song">
+                    <p id="song-duration">3:12</p>
+                </div>
+            </div>
+
+            <div class="uploaded-song change5" id="flex">
+                <div class="hashtag-song" id="hashtag5">5</div>
+                <div class="play-song" id="play5">
+                    <img src="./icons/icon-play.png" style="margin-left: -15px; height: 20px; width: 20px;"
+                        onclick="playakimbo()">
+                </div>
+                <div class="cover-song" id="cover-song"><img src="./img/akimbo.png" style="height: 50px; width: 50px;">
+                </div>
+                <div class="title-song">
+                    <p id="song-name">Akimbo</p>
+                </div>
+                <div class="album-song">
+                    <p id="song-album">Akimbo</p>
+                </div>
+                <div class="button-delete-song"><img src="./icons/icon-delete.png" class="icon" onclick="deletesong()">
+                </div>
+                <div class="duration-song">
+                    <p id="song-duration">2:31</p>
+                </div>
+            </div>
+        </div>
+        <!-- Scripts -->
+        <script src="./js/play.js"></script>
+        <script src="./js/hover-song.js"></script>
+        <script src="./js/delete-song.js"></script>
+</body>
+
+</html>
