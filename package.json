@@ -1,15 +1,18 @@
 {
   "name": "sopowtify",
-  "productName": "sopowtify",
+  "productName": "Sopowtify",
   "version": "1.0.0",
   "description": "My Electron application description",
   "main": "src/index.js",
   "scripts": {
     "start": "electron-forge start",
     "package": "electron-forge package",
-    "make": "electron-forge make",
+    "macos": "electron-builder --mac",
+    "linux": "electron-builder --linux",
+    "win": "electron-builder --win",
     "publish": "electron-forge publish",
-    "lint": "echo \"No linting configured\""
+    "lint": "echo \"No linting configured\"",
+    "electron": "ELECTRON_DISABLE_SECURITY_WARNINGS=true electron ."
   },
   "keywords": [],
   "author": {
@@ -24,13 +27,15 @@
         {
           "name": "@electron-forge/maker-squirrel",
           "config": {
-            "name": "sopowtify"
+            "name": "Sopowtify"
           }
         },
         {
           "name": "@electron-forge/maker-zip",
           "platforms": [
-            "darwin"
+            "darwin",
+            "linux",
+            "win32"
           ]
         },
         {
@@ -45,6 +50,7 @@
     }
   },
   "dependencies": {
+    "discord-rpc": "^4.0.1",
     "electron-squirrel-startup": "^1.0.0"
   },
   "devDependencies": {
@@ -53,6 +59,7 @@
     "@electron-forge/maker-rpm": "^6.0.0-beta.61",
     "@electron-forge/maker-squirrel": "^6.0.0-beta.61",
     "@electron-forge/maker-zip": "^6.0.0-beta.61",
-    "electron": "16.0.5"
+    "electron": "^16.0.5",
+    "electron-builder": "^22.14.5"
   }
 }

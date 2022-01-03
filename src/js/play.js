@@ -1,45 +1,27 @@
 let i = 0;
-function playfixette() {
+
+function play(song) {
   if (i > 0) {
-        i = 0;
-        document.getElementById('fixette').pause()
-  } else {          
-      i++;
-      document.getElementById('fixette').play();
-  }}
+    i = 0;
+    document.getElementById(song).pause();
+  } else {
+    i++;
+    document.getElementById(song).play();
+  }
+}
 
-  function playgalerie() {
-    if (i > 0) {
-          i = 0;
-          document.getElementById('galerie').pause()
-    } else {          
-        i++;
-        document.getElementById('galerie').play();
-    }}
-
-    function playshonen() {
-      if (i > 0) {
-            i = 0;
-            document.getElementById('shonen').pause()
-      } else {          
-          i++;
-          document.getElementById('shonen').play();
-      }}
-
-      function playespace() {
-        if (i > 0) {
-              i = 0;
-              document.getElementById('espace').pause()
-        } else {          
-            i++;
-            document.getElementById('espace').play();
-        }}
-
-        function playakimbo() {
-          if (i > 0) {
-                i = 0;
-                document.getElementById('akimbo').pause()
-          } else {          
-              i++;
-              document.getElementById('akimbo').play();
-          }}
+            document.getElementById('fixette').addEventListener('ended', function() {
+              document.getElementById('galerie').play()
+            })
+            document.getElementById('galerie').addEventListener('ended', function() {
+              document.getElementById('shonen').play()
+            })
+            document.getElementById('shonen').addEventListener('ended', function() {
+              document.getElementById('espace').play()
+            })
+            document.getElementById('espace').addEventListener('ended', function() {
+              document.getElementById('akimbo').play()
+            })
+            document.getElementById('akimbo').addEventListener('ended', function() {
+              document.getElementById('fixette').play()
+            })
